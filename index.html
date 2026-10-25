@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Guy Big Desk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    //starting page
+    <div id="join" class="overlay">
+        <div class="card">
+            <h1>little guy, big desk</h1>
+            <p>i'm a tiny guy on a really big desk!</p>
+
+            <p>name your little guy</p>
+            <input type="text" id="nameInput" maxlength="12" placeholder="tiny">
+
+            <p>choose your shirt color</p>
+            <div id="swatches"></div>
+
+            <button id="joinBtn">start game</button>
+
+            <p class="hint">
+                use WASD or arrows to move <br>
+                press Z to zoom out <br>
+                press E to talk <br>
+                press SPACE to squeak <br>
+                press ENTER to chat <br>
+                press 1-4 for emotes
+            </p>
+        </div>
+    </div>
+
+    // main game 
+    <div id="game" class="hidden">
+
+        <canvas id="c"></canvas>
+
+        // game scores
+        <div id="hud">
+            <div id="carry">🍪 carrying 0/8</div>
+            <div id="deliv">🏠 delivered 0</div>
+            <div id="online">👥 1</div>
+        </div>
+
+        <div id="board"></div>
+
+        // castle progress 
+        <div id="castleBar">
+            <div id="castleFill"></div>
+            <span id="castleText">tiny castle 0%</span>
+        </div>
+
+        // talking box 
+        <div id="dialog" class="hidden">
+            <b id="dName"></b>
+            <div id="dText"></div>
+        </div>
+
+        // small notification
+        <div id="toast" class="hidden"></div>
+
+        // chat box 
+        <div id="chat">
+            <div id="chatLog"></div>
+            <input type="text" id="chatInput" maxlength="60" placeholder="write something...">
+        </div>
+
+        //buttons for moving on phone
+        <div id="dpad">
+            <button data-k="up">▲</button>
+            <button data-k="left">◀</button>
+            <button data-k="down">▼</button>
+            <button data-k="right">▶</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
